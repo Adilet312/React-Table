@@ -4,14 +4,14 @@ import C from './C';
 import './A.css';
 export const Acontext = React.createContext();
 const A = () =>{
-  const [color,setColor] = useState('');
+  const [color,setColor] = useState('purple');
   const changeColor = (given_color) =>{
     setColor(given_color);
   }
   return(
     <Fragment>
       <ul>
-      <Acontext.Provider value = {{changeColor}}>
+      <Acontext.Provider value = {{changeColor,color}}>
         <li className = 'a' >A</li>
         <B color = {color}/>
         <C/>

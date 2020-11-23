@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TableData from './components/TableData';
+import A from './components/Boxes/A';
 
 
 ReactDOM.render(
 
-  <TableData/>,
+  <A/>,
   document.getElementById('root')
 
 );
