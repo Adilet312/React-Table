@@ -1,13 +1,11 @@
-import React, {useState,useEffect,useContext} from 'react';
+import React, {useState,useEffect,useContext,useMemo } from 'react';
 import {Acontext} from './A';
 
 const E = () =>{
-  const { changeColor } = useContext(Acontext)
-  const colors = ["green","silver","brown","lightblue"];
-  let index = Math.floor(Math.random()*colors.length);
-  console.log(index);
+  const { changeColor } = useContext(Acontext);
+  // let index =  Math.floor(Math.random()*colors.length);
   return(
-   <li className = 'e' onClick = {()=> changeColor(`${colors[index]}`)}>E</li>
+   <li className = 'e' onClick = {()=> changeColor(`${Math.floor(Math.random()*4)}`)}>E</li>
   )
 }
 export default E;

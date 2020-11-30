@@ -1,12 +1,13 @@
-import React, {useState,useEffect,useContext,Fragment} from 'react';
+import React, { useState, useEffect, useContext, Fragment, useCallback } from 'react';
 import B from './B';
 import C from './C';
 import './A.css';
+const colors = ["green","silver","brown","lightblue"];
 export const Acontext = React.createContext();
 const A = () =>{
   const [color,setColor] = useState('purple');
-  const changeColor = (given_color) =>{
-    setColor(given_color);
+  const changeColor = (index) =>{
+    setColor(`${colors[index]}`);
   }
   return(
     <Fragment>
